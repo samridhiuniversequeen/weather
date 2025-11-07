@@ -167,26 +167,26 @@
         </div>
     </div>
 
-    <div class="container mx-auto px-4 py-8 max-w-6xl">
+    <div class="container mx-auto px-2 sm:px-4 py-4 sm:py-8 max-w-6xl">
         <!-- Header -->
-        <div class="text-center mb-8 animate-fade-in">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Weather Dashboard</h1>
-            <p class="text-white/80 text-lg">Real-time weather forecast at your fingertips</p>
+        <div class="text-center mb-4 sm:mb-8 animate-fade-in">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2">Weather Dashboard</h1>
+            <p class="text-white/80 text-base sm:text-lg">Real-time weather forecast at your fingertips</p>
         </div>
 
         <!-- Search Bar -->
-        <div class="mb-8 animate-fade-in">
-            <div class="glass-effect rounded-2xl p-4 max-w-2xl mx-auto">
-                <div class="flex gap-2">
+        <div class="mb-4 sm:mb-8 animate-fade-in">
+            <div class="glass-effect rounded-2xl p-3 sm:p-4 max-w-sm sm:max-w-md md:max-w-2xl mx-auto">
+                <div class="flex flex-col sm:flex-row gap-2">
                     <input 
                         type="text" 
                         id="cityInput" 
                         placeholder="Enter city name..." 
-                        class="flex-1 px-6 py-3 rounded-xl bg-white/20 text-white placeholder-white/60 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
+                        class="flex-1 px-4 sm:px-6 py-2 sm:py-3 rounded-xl bg-white/20 text-white placeholder-white/60 border border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all"
                     >
                     <button 
                         id="searchBtn" 
-                        class="px-8 py-3 bg-white/30 hover:bg-white/40 text-white font-semibold rounded-xl transition-all hover-scale"
+                        class="px-6 sm:px-8 py-2 sm:py-3 bg-white/30 hover:bg-white/40 text-white font-semibold rounded-xl transition-all hover-scale"
                     >
                         Search
                     </button>
@@ -197,32 +197,32 @@
 
         <!-- Loading Spinner -->
         <div id="loadingSpinner" class="hidden text-center mb-8">
-            <div class="inline-block w-12 h-12 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
-            <p class="text-white mt-3 font-medium">Loading weather data...</p>
+            <div class="inline-block w-8 h-8 sm:w-12 sm:h-12 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+            <p class="text-white mt-3 font-medium text-sm sm:text-base">Loading weather data...</p>
         </div>
 
         <!-- Main Content -->
         <div id="weatherContent" class="hidden">
             <!-- Current Weather Card -->
-            <div class="glass-effect rounded-3xl p-6 md:p-8 mb-8 animate-fade-in hover-scale">
-                <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass-effect rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 mb-8 animate-fade-in hover-scale">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <!-- Left Side: Main Weather Info -->
-                    <div class="text-white">
+                    <div class="text-white text-center md:text-left">
                         <div class="mb-4">
-                            <h2 id="cityName" class="text-3xl md:text-4xl font-bold mb-1"></h2>
-                            <p id="localTime" class="text-white/70 text-sm"></p>
+                            <h2 id="cityName" class="text-2xl sm:text-3xl md:text-4xl font-bold mb-1"></h2>
+                            <p id="localTime" class="text-white/70 text-xs sm:text-sm"></p>
                         </div>
                         
-                        <div class="flex items-center gap-4 mb-6">
-                            <img id="weatherIcon" src="" alt="Weather" class="w-24 h-24">
-                            <div>
-                                <div id="temperature" class="text-6xl font-bold"></div>
-                                <div id="condition" class="text-xl text-white/90 mt-1"></div>
+                        <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-6">
+                            <img id="weatherIcon" src="" alt="Weather" class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24">
+                            <div class="text-center md:text-left">
+                                <div id="temperature" class="text-4xl sm:text-5xl md:text-6xl font-bold"></div>
+                                <div id="condition" class="text-base sm:text-lg md:text-xl text-white/90 mt-1"></div>
                             </div>
                         </div>
                         
-                        <div class="flex items-center gap-2 text-white/80">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <div class="flex items-center justify-center md:justify-start gap-2 text-white/80 text-sm sm:text-base">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
                             </svg>
                             <span>Feels like <span id="feelsLike" class="font-semibold"></span></span>
@@ -230,28 +230,28 @@
                     </div>
                     
                     <!-- Right Side: Weather Details -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="glass-effect rounded-2xl p-4">
-                            <div class="text-white/70 text-sm mb-1">Humidity</div>
-                            <div id="humidity" class="text-2xl font-bold text-white"></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                        <div class="glass-effect rounded-xl sm:rounded-2xl p-3 sm:p-4">
+                            <div class="text-white/70 text-xs sm:text-sm mb-1">Humidity</div>
+                            <div id="humidity" class="text-xl sm:text-2xl font-bold text-white"></div>
                         </div>
-                        <div class="glass-effect rounded-2xl p-4">
-                            <div class="text-white/70 text-sm mb-1">Wind Speed</div>
-                            <div id="windSpeed" class="text-2xl font-bold text-white"></div>
+                        <div class="glass-effect rounded-xl sm:rounded-2xl p-3 sm:p-4">
+                            <div class="text-white/70 text-xs sm:text-sm mb-1">Wind Speed</div>
+                            <div id="windSpeed" class="text-xl sm:text-2xl font-bold text-white"></div>
                         </div>
-                        <div class="glass-effect rounded-2xl p-4">
-                            <div class="text-white/70 text-sm mb-1">Pressure</div>
-                            <div id="pressure" class="text-2xl font-bold text-white"></div>
+                        <div class="glass-effect rounded-xl sm:rounded-2xl p-3 sm:p-4">
+                            <div class="text-white/70 text-xs sm:text-sm mb-1">Pressure</div>
+                            <div id="pressure" class="text-xl sm:text-2xl font-bold text-white"></div>
                         </div>
-                        <div class="glass-effect rounded-2xl p-4">
-                            <div class="text-white/70 text-sm mb-1">Wind Direction</div>
-                            <div id="windDir" class="text-2xl font-bold text-white"></div>
+                        <div class="glass-effect rounded-xl sm:rounded-2xl p-3 sm:p-4">
+                            <div class="text-white/70 text-xs sm:text-sm mb-1">Wind Direction</div>
+                            <div id="windDir" class="text-xl sm:text-2xl font-bold text-white"></div>
                         </div>
-                        <div class="glass-effect rounded-2xl p-4 col-span-2">
-                            <div class="text-white/70 text-sm mb-1">Air Quality Index</div>
+                        <div class="glass-effect rounded-xl sm:rounded-2xl p-3 sm:p-4 col-span-1">
+                            <div class="text-white/70 text-xs sm:text-sm mb-1">Air Quality Index</div>
                             <div class="flex items-center justify-between">
-                                <div id="aqi" class="text-2xl font-bold text-white"></div>
-                                <div id="aqiStatus" class="text-sm font-semibold px-3 py-1 rounded-full"></div>
+                                <div id="aqi" class="text-xl sm:text-2xl font-bold text-white"></div>
+                                <div id="aqiStatus" class="text-xs sm:text-sm font-semibold px-2 sm:px-3 py-1 rounded-full"></div>
                             </div>
                         </div>
                     </div>
@@ -260,18 +260,18 @@
 
             <!-- Smart Tips Section -->
             <div id="tipsSection" class="mb-8 animate-fade-in">
-                <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                    <span class="text-3xl">💡</span> Smart Weather Tips
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-4 flex items-center justify-center md:justify-start gap-2">
+                    <span class="text-2xl sm:text-3xl">💡</span> Smart Weather Tips
                 </h3>
-                <div id="tipsGrid" class="grid md:grid-cols-3 gap-4">
+                <div id="tipsGrid" class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
                     <!-- Tips will be inserted here -->
                 </div>
             </div>
 
             <!-- 5-Day Forecast -->
             <div class="animate-fade-in">
-                <h3 class="text-2xl font-bold text-white mb-4">5-Day Forecast</h3>
-                <div id="forecastGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-4">5-Day Forecast</h3>
+                <div id="forecastGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
                     <!-- Forecast cards will be inserted here -->
                 </div>
             </div>
@@ -477,13 +477,13 @@
                 const dayInfo = weatherMap[dayCode] || { desc: 'Unknown', icon: '🌤️' };
                 
                 const card = document.createElement('div');
-                card.className = 'glass-effect rounded-2xl p-4 text-center hover-scale';
+                card.className = 'glass-effect rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center hover-scale';
                 card.innerHTML = `
-                    <div class="text-white/90 font-semibold mb-1">${dayName}</div>
-                    <div class="text-white/70 text-sm mb-3">${dateStr}</div>
-                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='white'><text x='12' y='24' font-size='24' text-anchor='middle' dy='.3em'>${dayInfo.icon}</text></svg>" alt="Weather" class="w-16 h-16 mx-auto mb-3">
-                    <div class="text-white/90 text-sm mb-2">${dayInfo.desc}</div>
-                    <div class="flex justify-center gap-2 text-white font-semibold">
+                    <div class="text-white/90 font-semibold mb-1 text-sm sm:text-base">${dayName}</div>
+                    <div class="text-white/70 text-xs sm:text-sm mb-3">${dateStr}</div>
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='white'><text x='12' y='24' font-size='24' text-anchor='middle' dy='.3em'>${dayInfo.icon}</text></svg>" alt="Weather" class="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3">
+                    <div class="text-white/90 text-xs sm:text-sm mb-2">${dayInfo.desc}</div>
+                    <div class="flex justify-center gap-2 text-white font-semibold text-sm sm:text-base">
                         <span>${Math.round(daily.temperature_2m_max[i])}°</span>
                         <span class="text-white/60">${Math.round(daily.temperature_2m_min[i])}°</span>
                     </div>
@@ -587,11 +587,11 @@
             // Render tips (limit to 3)
             tips.slice(0, 3).forEach(tip => {
                 const tipCard = document.createElement('div');
-                tipCard.className = `tip-card glass-effect rounded-2xl p-5 border-2 ${tip.color}`;
+                tipCard.className = `tip-card glass-effect rounded-xl sm:rounded-2xl p-4 sm:p-5 border-2 ${tip.color}`;
                 tipCard.innerHTML = `
-                    <div class="cartoon-tip text-4xl mb-3">${tip.icon}</div>
-                    <h4 class="text-white font-bold text-lg mb-2">${tip.title}</h4>
-                    <p class="text-white/80 text-sm leading-relaxed">${tip.message}</p>
+                    <div class="cartoon-tip text-3xl sm:text-4xl mb-3">${tip.icon}</div>
+                    <h4 class="text-white font-bold text-base sm:text-lg mb-2">${tip.title}</h4>
+                    <p class="text-white/80 text-xs sm:text-sm leading-relaxed">${tip.message}</p>
                 `;
                 tipsGrid.appendChild(tipCard);
             });
