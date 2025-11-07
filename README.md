@@ -1,6 +1,6 @@
 # Weather Forecast Dashboard
 
-![Weather Dashboard Preview](https://via.placeholder.com/800x400/667eea/ffffff?text=Weather+Dashboard+Preview)  
+![Weather Dashboard Preview](https://samridhiuniversequeen.github.io/weather/)  
 
 ## 📖 Description
 
